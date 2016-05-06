@@ -3,7 +3,7 @@ ruby_environment_setup
 
 rbenvのセットアップとかをメモ
 
-# 本家サイト
+## 本家サイト
 
 https://github.com/rbenv/rbenv
 
@@ -20,7 +20,7 @@ http://takatoshiono.hatenablog.com/entry/2015/01/09/012040
 ## .bash_profileを編集
 
 以下を追加。  
-こうすることで、`~/.rbenv/shims`にパスが通ります。
+こうすることで、`~/.rbenv/shims`にパスが通る。
 
     eval "$(rbenv init -)"
 
@@ -53,3 +53,11 @@ http://takatoshiono.hatenablog.com/entry/2015/01/09/012040
     /Users/matoh/.rbenv/shims/bundler
 
 というように、shims配下にインストールされる。
+
+## rbenv-binstubsの導入
+
+bundlerを利用する際、`bundle exec`を付与しないで済むように、 rbenv-binstubsを導入します。
+
+    $ mkdir -p ~/.rbenv/plugins
+    $ cd ~/.rbenv/plugins
+    $ git clone https://github.com/ianheggie/rbenv-binstubs.git
